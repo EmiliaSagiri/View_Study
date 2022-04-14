@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ThreeView">
+        <attr name="background" format="reference" />
+        <attr name="back_color" format="color|reference"/>
+        <attr name="view_high"  format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="TwoView">
+        <attr name="voiceLineColor" format="color"/>
+        <attr name="voiceTextColor" format="color"/>
+        <attr name="voiceLineWidth"  format="dimension"/>
+        <attr name="voiceTextSize"  format="dimension"/>
+        <attr name="updateSpeed" format="color"/>
+    </declare-styleable>
+
+</resources>
