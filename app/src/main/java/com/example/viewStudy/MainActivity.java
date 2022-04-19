@@ -3,9 +3,6 @@ package com.example.viewStudy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.zhysb.R;
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "test";
@@ -14,13 +11,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         threeView =new ThreeView(this);
         setContentView(R.layout.activity_main);
         threeView = findViewById(R.id.test);
         new Thread(new MyGameCanvas()).start();
-
-
     }
 
     class MyGameCanvas implements Runnable {
@@ -44,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void update() {
         int w = getWindowManager().getDefaultDisplay().getWidth();
-        for(int i=0;i<10;i++){
+        for(int i=0;i<9;i++){
             threeView.data.add(i, (int) (Math.random()*500));
             if (threeView.data.get(i)>= w) {
                 threeView.data.add(i,0);
@@ -54,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onDestroy(){
         super.onDestroy();
+        threeView =null;
     }
 
 

@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class ThreeView extends View {
      int width = 80;
      int top =500;
      String [] color_Paint = new String[]{"#990033","#FF0033","#FF0099","#FF6600","#FFCC00",
-        "#00CC33","#33FF99","#00CCCC","#CCCC99","#000099" };
+        "#00CC33","#33FF99","#00CCCC","#CCCC99"};
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
 
@@ -77,8 +78,6 @@ public class ThreeView extends View {
         RectF rectF9 = new RectF(left+8*width,top+data.get(8),left+8*width+size,bottom);//长方形4
         canvas.drawRect(rectF9, FirstPaint(Color.parseColor(color_Paint[8])));
 
-        RectF rectF10 = new RectF(left+9*width,top+data.get(9),left+9*width+size,bottom);//长方形4
-        canvas.drawRect(rectF10, FirstPaint(Color.parseColor(color_Paint[9])));
 
     }
 
